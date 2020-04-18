@@ -1,0 +1,7 @@
+github 세팅
+
+1. 폴더 생성
+2. vscode에서 폴더 열기
+3. 파일 생성 후 commit -> 아직 연동되기 전이라 push 불가
+4. git repostory 생성
+5. vscode 터미널에서 깃 remote 주소 + push로 연결

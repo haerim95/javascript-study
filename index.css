@@ -1,0 +1,39 @@
+body{
+    padding: 0 30px;
+}
+header{
+    padding: 10px 0;
+    border-bottom: 1px solid skyblue;
+}
+header h2{
+    text-align: center;
+}
+section{
+    width: 900px;
+    margin: 0 auto;
+}
+ul{
+    margin-bottom: 45px;
+}
+li{
+    padding-left: 15px;
+    font-size: 14px;
+    list-style: none;
+    line-height: 1.25em;
+}
+li + li{
+    margin-top: 10px;
+}
+li a{
+    color: #898989;
+    text-decoration: none;
+}
+ul.basic a{
+    color: slategrey;
+}
+li.title{
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.45em;
+}

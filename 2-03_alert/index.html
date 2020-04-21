@@ -16,12 +16,15 @@
     </header>
     <div class="main-wrapper">
         <section>
-            
+            <p id="choice">여기에 일시를 표시한다.</p>
         </section>
     </div>
     <footer>JavaScript Samples</footer>
     <script>
-        window.alert('애플리케이션 연결을 완료했습니다.');
+        //p 내용 변경
+        document.getElementById('choice').textContent = new Date();
+        // text console 출력
+        console.log(document.getElementById('choice').textContent);
     </script>
 </body>
 </html>

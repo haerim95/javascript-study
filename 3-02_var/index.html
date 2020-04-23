@@ -29,12 +29,39 @@
                 <li>변수에 데이터를 '변경한다'</li>
             </ol>
 
+            <h4>대입연산자 (=)</h4>
+            <table>
+                <thead>
+                    <th>=</th>
+                    <th>==</th>
+                    <th>===</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>대입연산자</td>
+                        <td>동일한거처럼 보이게 동작</td>
+                        <td>완전히 같을 때 true</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </section>
     </div>
     <footer>JavaScript Samples</footer>
     <script>
+        // 실습 1
+        // var answer = window.prompt('도움말을 보시겠습니까?');
+        // console.log(answer);
+        // 실습 2
+        // var answer = 'yes';
+        // console.log(answer);
+        // answer = 'no';
+        // console.log(answer);
+        //실습3
         var answer = window.prompt('도움말을 보시겠습니까?');
-        console.log(answer);
+        if(answer === 'yes'){
+            window.alert('탭키로 점프해서 장애물을 피합니다.')
+        }
     </script>
 </body>
 </html>

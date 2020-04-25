@@ -45,6 +45,10 @@
                 </tbody>
             </table>
 
+            <h4>else if</h4>
+            <p>if문 조건식이 false가 되면 else 이후에 실행된다.</p>
+            <p>else 뒤에 if문을 계속 추가할 수 있다.</p>
+
         </section>
     </div>
     <footer>JavaScript Samples</footer>
@@ -58,9 +62,18 @@
         // answer = 'no';
         // console.log(answer);
         //실습3
+        // var answer = window.prompt('도움말을 보시겠습니까?');
+        // if(answer === 'yes'){
+        //     window.alert('탭키로 점프해서 장애물을 피합니다.')
+        // }
+        //실습4
         var answer = window.prompt('도움말을 보시겠습니까?');
         if(answer === 'yes'){
-            window.alert('탭키로 점프해서 장애물을 피합니다.')
+            window.alert('탭키로 점프해서 장애물을 피합니다.');
+        }else if(answer === 'no'){
+            window.alert('게임 진행중...');
+        }else{
+            window.alert('yes 또는 no로 대답해주세요.');
         }
     </script>
 </body>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>1장, 2장, 3장... 이라고 출력</h1>
+            <h2>개발 도구를 사용해 보자!</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <h4>for() 실행조건</h4>
+            <p>for(초깃값, 반복 조건, 실행 후 처리)</p>
+
+            <h4>++ 연산자</h4>
+            <p>'++' 기호 앞이나 뒤에 오는 변수에 <span>'1을 더한다'</span></p>
+            <p>인크리먼트(increment, 증가)라고 부르기도 한다</p>
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        //실습1
+        // for(var i =1; i <= 10; i = i+1 ){
+        //     console.log(i);
+        // }
+        //실습2
+        for(var i =1; i <= 10; i++ ){
+            console.log(i + '장');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>콘솔로 몬스터를 물리치자</h1>
+            <h2>반복(While)</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <h4>while</h4>
+            <p>()안의 조건식이 true인 동안 {~} 안에 처리를 반복 실행한다.</p>
+
+            <h4>for문과 while문의 차이</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>for문</th>
+                        <th>while문</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>반복 횟수가 사전에 정해져 있음</td>
+                        <td>반복 횟수가 사전에 정해져 있지 않음</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        var enemy = 100;
+        var attack;
+
+        window.alert('대전 시작!');
+        //enemy가 0보다 작아질때까지 반복해라
+        while(enemy > 0){
+            attack = Math.floor(Math.random() * 30) + 1;
+            console.log('몬스터에게' + attack + '의 피해를 입혔다.');
+            //반복될때마다 enemy의 값이 - 된 값으로 변한다.
+            enemy = enemy - attack;
+        }
+        console.log('몬스터를 물리쳤다!');
+    </script>
+</body>
+</html>

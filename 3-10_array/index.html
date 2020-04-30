@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>항목을 리스트로 표시하기</h1>
+            <h2>배열</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <h4>배열 만드는 법</h4>
+            <p>대괄호 ([]) 사용</p>
+            <p>var 변수명 = [];</p>
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        var todo = ['디자인 샘플 작성', '데이터 정리', '스터디 신청', '우유 사기'];
+        for(var i = 0; i < todo.length; i++){
+            console.log(todo[i]);
+        }
+    </script>
+</body>
+</html>

@@ -37,6 +37,32 @@
                     <li>계산 결과(8460)를 호출한 곳으로 반환한다.</li>
                 </ul>
             </div>
+
+            <h4>함수 작성법</h4>
+            <div class="bg">
+                <p>
+                    var 함수명 = function(매개변수){ <br/>
+                        구체적 처리 내용<br/>
+                    };
+                </p>
+            </div>
+
+            <h4>return 함수</h4>
+            <p>함수 실행을 종료하고, 주어진 값을 함수호출지점으로 반환한다.</p>
+
+            <h4>실습 작업결과물</h4>
+            <div class="bg">
+                <p id="output"></p>
+            </div>
+            <h2>
+                매개변수를 변경하여 다른 데이터 가공처리
+            </h2>
+            <div class="bg">
+                <p id="output1"></p>
+                <p id="output2"></p>
+                <p id="output3"></p>
+            </div>
+
         </section>
     </div>
     <footer>JavaScript Samples</footer>
@@ -44,8 +70,13 @@
         var total = function(price){
             var tax = 0.08;
             return price + price * tax;
+            //8000 + (8000*0.08)
         }
-        console.log('커피 기계의 가격은' + total(8000) + '원(부가세 포함) 입니다.')
+        console.log('커피 기계의 가격은' + total(8000) + '원(부가세 포함) 입니다.');
+        document.getElementById('output').textContent = '커피 기계의 가격은' + total(8000) + '원(부가세 포함) 입니다.';
+        document.getElementById('output1').textContent = '커피 기계의 가격은' + total(8000) + '원(부가세 포함) 입니다.';
+        document.getElementById('output2').textContent = '커피 기계의 가격은' + total(200) + '원(부가세 포함) 입니다.';
+        document.getElementById('output3').textContent = '커피 기계의 가격은' + total(1000) + '원(부가세 포함) 입니다.';
     </script>
 </body>
 </html>

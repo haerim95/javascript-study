@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>아이템 가격과 재고 표시하기</h1>
+            <h2>객체</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <h4>객체(Object)란?</h4>
+            <p>여러 프로퍼티를 가지고 있는 데이터의 집합</p>
+            <h4>1. 객체작성</h4>
+            <p>중괄호 {}를 사용한다.<br/>var 변수명 = {};</p>
+            <p>프로퍼티 갯수엔 제한이 없다.</p>
+            <h4>2. 프로퍼티 읽기</h4>
+            <p>[1] 객체명.프로퍼티명</p>
+            <p>[2] 객체명['프로퍼티명']</p>
+            <h4>3. 프로퍼티 정보 변경</h4>
+            <p>[1] 객체명.프로퍼티명 = 변경할 데이터;</p>
+            <p>[2] 객체명['프로퍼티명'] = 변경할 데이터;</p>
+            <fieldset>
+                <legend>프로퍼티에 함수 데이터 저장</legend>
+                var obj = { <br/>
+                    addTax : function(num){ <br/>
+                        return num * 1.08; <br/>
+                    } <br/>
+                };
+                <br/><br/>
+                프로퍼티의 데이터가 함수 일때 해당 프로퍼티를 '메서드' 라고 부른다.
+            </fieldset>
+            <h4>실습 예제</h4>
+            <table>
+                <tr>
+                    <td id="title"></td>
+                    <td id="price"></td>
+                    <td id="stock"></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        var jsbook = {title: '자바스크립트 입문', price: 2500, stock: 3};
+        /*console.log(jsbook);
+        console.log(jsbook.title);
+        console.log(jsbook['price']);
+        jsbook.stock = 10;
+        console.log(jsbook.stock);
+        jsbook['stock'] = 12;
+        console.log(jsbook['stock']);*/
+        //for...in 코드 
+        /*
+        for(var p in jsbook ){
+            console.log(p + '=' + jsbook[p]);
+        }
+        */
+        document.getElementById('title').textContent = jsbook.title;
+        document.getElementById('price').textContent = jsbook.price + '원';
+        document.getElementById('stock').textContent = jsbook.stock;
+
+    </script>
+</body>
+</html>

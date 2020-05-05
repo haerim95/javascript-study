@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>폼의 입력 내용 가져오기</h1>
+            <h2>압력 내용 가져오기 및 이벤트</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <form action="#" id="form">
+                <input type="text" name="word">
+                <input type="submit" value="검색">
+            </form>
+            <!-- 출력 위한 공간 -->
+            <p id="output"></p>
+
+            <fieldset>
+                <legend>입력 내용 읽어오기</legend>
+                취득한 &lt;form&gt; 요소 중 읽고 싶은 양식의 name 속성.value
+            </fieldset>
+
+            <hr>
+            <h4>이벤트(event)</h4>
+            <p>링크 또는 버튼을 클릭했을 때, 키보드를 조작했을때, 페이지 로딩이 끝났을 때 등등 에 등장하는 것</p>
+            <fieldset>
+                <legend>요소에 이벤트 설정하기</legend>
+                취득한 요소.onsubmit = function(){ <br/>
+                    처리 내용<br/>
+                };
+            </fieldset>
+            <h4>form 속성 (input)</h4>
+            <p>action 엔 보통 url을 넣는데, 데이터를 지정한 url로 전송한다.</p>
+            <p>url이 없을 땐 보통 '#' 으로 지정해놓는데, #은 같은 페이지로 이동한다. 즉, 새로고침이다.</p>
+            
+            <h4>return false</h4>
+            <p>HTML 기본 동작을 취소할 수 있다.</p>
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        document.getElementById('form').onsubmit = function(){
+            //console.log('클릭했습니다.');
+            var search = document.getElementById('form').word.value;
+            document.getElementById('output').textContent = ' ' + search + ' 검색중…';
+            //페이지 새로고침 방지 ↓
+            return false;
+        };
+    </script>
+</body>
+</html>

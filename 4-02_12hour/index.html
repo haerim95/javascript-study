@@ -28,8 +28,17 @@
         var hour = now.getHours();
         var min = now.getMinutes();
 
-        var output = year + '/' + (month + 1) + '/' + date + '' + hour + ':' + min;
+        //12시간 표기법
+        var ampm = '';
+        if(hour < 12){
+            ampm = 'a.m.';
+        }else{
+            ampm = 'p.m.';
+        }
+
+        var output = year + '/' + (month + 1) + '/' + date + '' + (hour % 12) + ':' + min + ampm;
         document.getElementById('time').textContent = output;
+
     </script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        p > span{
+            display: block;
+            padding-left: 15px;
+            font-size: 0.9rem;
+            line-height: 1.35rem;
+            margin-top: 5px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>'0을 붙여서 자릿수 맞추기'</h1>
+            <h2>숫자를 문자열로 변환</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            
+            <p></p>
+            <fieldset>
+                <legend>script 설명</legend>
+                <p>
+                    매개변수 두 개를 받고 있음.
+                    <span>1. num : 자릿수를 변경할 숫자를 지정</span> 
+                    <span>2. digit : 자릿수를 지정</span>
+                </p>
+                <p>
+                    숫자인 num을 문자열 데이터로 변환해야 한다.
+                    <span></span>
+                </p>
+            </fieldset>
+
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        var addZero = function(num, digit){
+
+            var numString = String(num);
+            while(numString.length < digit){
+                numString = '0' + numString;
+            }
+            return numString;
+
+        }
+        // 앞에 변수는 자릿수를 맞출 숫자, 뒤에 변수는 자릿수 
+        console.log(addZero(15, 4));
+    </script>
+</body>
+</html>

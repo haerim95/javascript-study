@@ -21,29 +21,16 @@
     <header>
         <div class="header-contents">
             <h1>'0을 붙여서 자릿수 맞추기'</h1>
-            <h2>숫자를 문자열로 변환</h2>
+            <h2>곡목리스트에 번호 붙이기</h2>
         </div>
     </header>
     <div class="main-wrapper">
         <section>
-            
-            <p></p>
-            <fieldset>
-                <legend>script 설명</legend>
-                <p>
-                    매개변수 두 개를 받고 있음.
-                    <span>1. num : 자릿수를 변경할 숫자를 지정</span> 
-                    <span>2. digit : 자릿수를 지정</span>
-                </p>
-                <p>
-                    숫자인 num을 문자열 데이터로 변환해야 한다.
-                    <span>string 메서드 사용</span>
-                </p>
-                <p>
-                    length
-                    <span>length 프로퍼티 사용</span>
-                </p>
-            </fieldset>
+        
+            <h2>Standards Revival MP3</h2>
+            <div id="list">
+                
+            </div>
 
         </section>
     </div>
@@ -56,10 +43,23 @@
                 numString = '0' + numString;
             }
             return numString;
-
         }
-        // 앞에 변수는 자릿수를 맞출 숫자, 뒤에 변수는 자릿수 
-        console.log(addZero(15, 4));
+
+        var songs = [
+                    'Stella By Star light',
+                    'Sk8er Boi',
+                    'Uptown Girl',
+                    'This Love',
+                    'What Makes You Beautiful',
+                    'She s So Lovely',
+                    'Start Over Again',
+                    'You Belong With Me'
+                ];
+
+                for(var i = 0; i < songs.length; i++){
+                    var paragraph = document.createElement('p');
+                }
+        
     </script>
 </body>
 </html>

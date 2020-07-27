@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>template</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-contents">
+            <h1>소수점 자릿수 버리기</h1>
+            <h2>Math 객체</h2>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <section>
+            <!-- PI : 원주율을 나타내는 프로퍼티 -->
+            <p>원주율은 <span><script>document.write(Math.PI);</script></span>이다.</p> 
+            <!-- floor : 지정한 숫자의 소수점 이하를 모두 버리는 메서드 -->
+            <p>그냥 버리면 <span><script>document.write(Math.floor(Math.PI));</script></span>이 된다.</p>
+
+            <p>소수점 두 번째 자리에서 버리면 <span id="output"></span>이다.</p>
+            
+        </section>
+    </div>
+    <footer>JavaScript Samples</footer>
+    <script>
+        var point = function(num, digit){
+            // pow 메서드는 ()안의 첫 번째 매개변서 a를 두번째 매개변수 b의 횟수만큼 ㄱ보하는 것이다.
+            var time = Math.pow(10, digit);
+            return Math.floor(num * time) / time;
+        }
+
+        document.getElementById('output').textContent = point(Math.PI, 2);
+    </script>
+</body>
+</html>
